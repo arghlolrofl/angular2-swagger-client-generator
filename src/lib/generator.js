@@ -14,6 +14,10 @@ var Generator = (function () {
     }
 
     Generator.prototype.Debug = false;
+	
+	Generator.prototype.getOutputPath = function() {
+		return this._outputPath;
+	};
 
     Generator.prototype.initialize = function () {
         this.LogMessage('Reading Swagger file', this._swaggerfile);
