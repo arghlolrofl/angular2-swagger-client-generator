@@ -1,0 +1,34 @@
+/* tslint:disable */
+{{#refs}}
+import { {{type}} } from "./{{type}}"
+{{/refs}}
+
+export class {{&name}} {
+{{#properties}}
+{{#isArray}}
+	public {{name}}: Array<{{typescriptType}}>;
+{{/isArray}}
+{{^isArray}}
+	public {{name}}: {{typescriptType}};
+{{/isArray}}
+{{/properties}}
+{{#refs}}
+{{#isArray}}
+	public {{name}}: Array<{{typescriptType}}>;
+{{/isArray}}
+{{^isArray}}
+	public {{name}}: {{typescriptType}};
+{{/isArray}}
+{{/refs}}
+
+	constructor() {
+{{#refs}}
+{{#isArray}}
+		this.{{name}} = [];
+{{/isArray}}
+{{^isArray}}
+		this.{{name}} = new {{typescriptType}}();
+{{/isArray}}
+{{/refs}}
+	}
+}
