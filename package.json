@@ -28,7 +28,8 @@
   "license": "APACHE",
   "scripts": {
     "swagger2angular": "ts-node ./src/bin/swagger2angular",
-    "build": "gulp"
+    "build": "gulp",
+	"postinstall": "npm run build"
   },
   "dependencies": {
     "handlebars": "^4.0.10",
