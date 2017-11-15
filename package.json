@@ -29,13 +29,14 @@
   "scripts": {
     "swagger2angular": "ts-node ./src/bin/swagger2angular",
     "build": "gulp",
-	"postinstall": "npm run build"
+	"postinstall": "postinstall-build gulp"
   },
   "dependencies": {
     "handlebars": "^4.0.10",
     "lodash": "^3.10.1",
     "mkdirp": "^0.5.1",
-    "optimist": "^0.6.1",
+    "optimist": "^0.6.1",,
+    "postinstall-build": "^5.0.1",
     "swagger-parser": "^3.4.1",
     "typescript-formatter": "^5.2.0"
   },
