@@ -9,7 +9,6 @@ bin
 obj
 output
 temp
-lib
 client
 dist
 npm-debug.log
